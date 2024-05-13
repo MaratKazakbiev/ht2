@@ -1,0 +1,62 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e558098d1ea0b33d946d2bc784742f63",
+    "packages": [
+        {
+            "name": "maratkazakbiev/ht_otus_1",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MaratKazakbiev/ht.git",
+                "reference": "db3b131fd0dba9a2a9e99aeacab9e156adcea789"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MaratKazakbiev/ht/zipball/db3b131fd0dba9a2a9e99aeacab9e156adcea789",
+                "reference": "db3b131fd0dba9a2a9e99aeacab9e156adcea789",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~8.3.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Maratkazakbiev\\HtOtus1\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Марат",
+                    "email": "maratkazakbiev@gmail.com"
+                }
+            ],
+            "description": "First hometask from Otus course",
+            "support": {
+                "issues": "https://github.com/MaratKazakbiev/ht/issues",
+                "source": "https://github.com/MaratKazakbiev/ht/tree/main"
+            },
+            "time": "2024-05-13T18:55:22+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "maratkazakbiev/ht_otus_1": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}
