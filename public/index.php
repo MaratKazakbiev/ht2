@@ -2,7 +2,7 @@
 <?php
 declare(strict_types=1);
 use Maratkazakbiev\HtOtus1\MathBracketsResolver;
-require DIR . '/../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 $short_options = '';
 $short_options .= 'p:';
