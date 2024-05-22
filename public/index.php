@@ -1,8 +1,8 @@
 #!/usr/bin/php
 <?php
-declare(strict_types =1 );
+declare(strict_types=1);
 use Maratkazakbiev\HtOtus1\MathBracketsResolver;
-require __DIR__ . '/../vendor/autoload.php';
+require DIR . '/../vendor/autoload.php';
 
 $short_options = '';
 $short_options .= 'p:';
@@ -13,27 +13,19 @@ $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
 socket_bind($socket, '127.0.0.1', (int)$port);
 socket_listen($socket, 2);
 
-$pid = pcntl_fork();
+while (true) {
+    $msgsock = socket_accept($socket);
 
-if($pid == -1){
-    return 'Не получилось создать поток';
-}elseif ($pid){
-//    Тут лежит родительский процесс
-    pcntl_wait($code);
-}else{
-    do {
-        $msgsock = socket_accept($socket);
+    $msg = "----Напишите свой пример----" . PHP_EOL;
+    socket_write($msgsock, $msg);
 
-        $msg = "----Напишите свой пример----";
-
-        socket_write($msgsock, $msg);
-
-
-        do{
-            $buffer = socket_read($msgsock, 2048, PHP_BINARY_READ );
+    $pid = pcntl_fork();
+    if ($pid == 0) { // Дочерний процесс
+        do {
+            $buffer = socket_read($msgsock, 2048, PHP_BINARY_READ);
             $buffer = trim($buffer);
 
-            if ($buffer == 'Выход'){
+            if ($buffer == 'Выход') {
                 break;
             }
 
@@ -41,9 +33,12 @@ if($pid == -1){
             $answer = $new->Resolve();
 
             socket_write($msgsock, $answer);
-        }while(true);
+        } while (true);
         socket_close($msgsock);
-    }while(true);
-    socket_close($socket);
-    exit(123);
+        exit(); // Завершаем дочерний процесс
+    } else { // Родительский процесс
+        // Продолжаем ожидать новых подключений
+    }
 }
+
+socket_close($socket);
