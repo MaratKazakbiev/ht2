@@ -12,16 +12,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MaratKazakbiev/ht.git",
-                "reference": "db3b131fd0dba9a2a9e99aeacab9e156adcea789"
+                "reference": "8e3d31922906f9e6bd3abd07969319a4ab0701ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MaratKazakbiev/ht/zipball/db3b131fd0dba9a2a9e99aeacab9e156adcea789",
-                "reference": "db3b131fd0dba9a2a9e99aeacab9e156adcea789",
+                "url": "https://api.github.com/repos/MaratKazakbiev/ht/zipball/8e3d31922906f9e6bd3abd07969319a4ab0701ac",
+                "reference": "8e3d31922906f9e6bd3abd07969319a4ab0701ac",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.3.0"
+                "php": "~8.0"
             },
             "default-branch": true,
             "type": "library",
@@ -45,7 +45,7 @@
                 "issues": "https://github.com/MaratKazakbiev/ht/issues",
                 "source": "https://github.com/MaratKazakbiev/ht/tree/main"
             },
-            "time": "2024-05-13T18:55:22+00:00"
+            "time": "2024-05-22T18:25:15+00:00"
         }
     ],
     "packages-dev": [],
