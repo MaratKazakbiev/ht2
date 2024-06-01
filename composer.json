@@ -1,5 +1,9 @@
 {
     "require": {
-        "maratkazakbiev/ht_otus_1": "dev-main"
+        "maratkazakbiev/ht_otus_1": "dev-main",
+        "symfony/yaml": "^7.1",
+        "ext-sockets": "*",
+        "ext-pcntl": "*",
+        "ext-posix": "*"
     }
 }
