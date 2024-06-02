@@ -1,6 +1,7 @@
 {
     "require": {
         "maratkazakbiev/ht_otus_1": "dev-main",
+        "php" : "~8.0",
         "symfony/yaml": "^7.1",
         "ext-sockets": "*",
         "ext-pcntl": "*",
