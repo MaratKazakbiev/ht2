@@ -1,11 +1,8 @@
-#!/usr/bin/php
 <?php
-declare(strict_types=1);
 use Maratkazakbiev\HtOtus1\MathBracketsResolver;
-
 require __DIR__ . '/../vendor/autoload.php';
 
-$port = 9000;
+$port = $_ENV['PORT'];
 
 $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
 socket_bind($socket, '127.0.0.1', $port);
@@ -20,7 +17,7 @@ while (true) {
     $pid = pcntl_fork();
     if ($pid == 0) { // Дочерний процесс
         do {
-            $buffer = socket_read($msgsock, 2048, PHP_BINARY_READ);
+            $buffer = $_POST['string'];
             $buffer = trim($buffer);
 
             if ($buffer == 'Выход') {
